@@ -91,4 +91,30 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className=\"md:hidden bg-white border-t shadow-lg\">\n          <div className=\"px-4 py-4 space-y-3\">\n            {navItems.map((item) => (\n              <Link\n                key={item.path}\n                to={item.path}\n                onClick={closeMobileMenu}\n                className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${\n                  isActive(item.path)\n                    ? 'bg-blue-100 text-blue-600 font-semibold'\n                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'\n                }`}\n              >\n                {item.label}\n              </Link>\n            ))}\n            <Link to=\"/contact\" onClick={closeMobileMenu}>\n              <Button className=\"w-full bg-blue-600 hover:bg-blue-700 text-white\">\n                Get Quote\n              </Button>\n            </Link>\n          </div>\n        </div>\n      )}\n    </header>\n  );\n};
+        <div className="md:hidden bg-white border-t shadow-lg">
+          <div className="px-4 py-4 space-y-3">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={closeMobileMenu}
+                className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                  isActive(item.path)
+                    ? 'bg-blue-100 text-blue-600 font-semibold'
+                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/contact" onClick={closeMobileMenu}>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                Get Quote
+              </Button>
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
