@@ -1,0 +1,47 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4338CA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#grad3)"/>
+  
+  <!-- Compressor Body (Larger) -->
+  <rect x="130" y="180" width="340" height="240" rx="20" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="2"/>
+  
+  <!-- Tank -->
+  <ellipse cx="570" cy="300" rx="90" ry="70" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="2"/>
+  
+  <!-- Motor -->
+  <rect x="80" y="230" width="90" height="120" rx="10" fill="#6B7280" stroke="#374151" stroke-width="2"/>
+  
+  <!-- Control Panel -->
+  <rect x="200" y="160" width="120" height="50" rx="5" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <circle cx="230" cy="185" r="8" fill="#10B981"/>
+  <circle cx="260" cy="185" r="6" fill="#F59E0B"/>
+  <circle cx="290" cy="185" r="6" fill="#EF4444"/>
+  
+  <!-- Pipes -->
+  <rect x="470" y="270" width="100" height="25" fill="#9CA3AF"/>
+  <rect x="470" y="330" width="100" height="25" fill="#9CA3AF"/>
+  
+  <!-- CompAir Logo Area -->
+  <rect x="50" y="50" width="200" height="80" fill="rgba(255,255,255,0.2)" rx="10"/>
+  <text x="150" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">CompAir</text>
+  <text x="150" y="110" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18">L75 V4</text>
+  
+  <!-- Specifications -->
+  <rect x="500" y="450" width="250" height="120" fill="rgba(255,255,255,0.9)" rx="10"/>
+  <text x="520" y="475" fill="#1F2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Specifications:</text>
+  <text x="520" y="495" fill="#374151" font-family="Arial, sans-serif" font-size="12">Motor: 75 kW</text>
+  <text x="520" y="510" fill="#374151" font-family="Arial, sans-serif" font-size="12">Pressure: 7.5-13 bar</text>
+  <text x="520" y="525" fill="#374151" font-family="Arial, sans-serif" font-size="12">Flow: 10.95-14.25 m³/min</text>
+  <text x="520" y="540" fill="#374151" font-family="Arial, sans-serif" font-size="12">Noise: 73 dBA</text>
+  <text x="520" y="555" fill="#374151" font-family="Arial, sans-serif" font-size="12">Weight: 2100 kg</text>
+  
+  <!-- Power Indicator -->
+  <text x="400" y="550" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="36" font-weight="bold">75kW</text>
+</svg>
