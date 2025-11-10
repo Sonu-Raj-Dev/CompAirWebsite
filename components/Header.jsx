@@ -1,16 +1,12 @@
 import Link from 'next/link';
+import CompAirLogo from './CompAirLogo';
+
 export default function Header(){
 return (
 <header className="bg-white shadow-sm sticky top-0 z-50">
 <div className="container mx-auto px-4 flex items-center justify-between py-4">
-<Link href="/" className="flex items-center gap-3">
-<div className="h-12 w-12 bg-blue-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-C
-</div>
-<div className="flex flex-col">
-<span className="font-bold text-xl text-gray-900">CompAir</span>
-<span className="text-sm text-gray-600">India</span>
-</div>
+<Link href="/" className="flex items-center">
+<CompAirLogo className="h-12" />
 </Link>
 <nav className="hidden md:flex gap-8 text-sm font-medium">
 <Link href="/products" className="text-gray-700 hover:text-blue-900 transition-colors">

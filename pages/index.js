@@ -3,6 +3,9 @@ import ProductCard from '../components/ProductCard'
 import AirFlowVisualizer from '../components/AirFlowVisualizer'
 import CompressorHeroAnimation from '../components/CompressorHeroAnimation'
 import IndustrialVisualSection from '../components/IndustrialVisualSection'
+import InteractivePressureDemo from '../components/InteractivePressureDemo'
+import CompressorConfigurator from '../components/CompressorConfigurator'
+import CompAirLogo from '../components/CompAirLogo'
 import { products } from '../data/products'
 
 
@@ -790,6 +793,106 @@ style={{animationDelay: item.delay}}
 )
 }
 
+function InteractiveDemosSection(){
+return (
+<section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
+<div className="container mx-auto px-4">
+{/* Section Header */}
+<div className="text-center mb-16">
+<div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+<span className="w-2 h-2 bg-blue-600 rounded-full mr-2 animate-pulse"></span>
+Interactive Experience
+</div>
+<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+Experience the <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Power</span> Yourself
+</h2>
+<p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+Don't just read about efficiency - play with real settings and see instant results. 
+Discover how small adjustments can lead to massive savings.
+</p>
+</div>
+
+{/* Interactive Demo */}
+<div className="mb-20">
+<InteractivePressureDemo />
+</div>
+
+{/* Configurator Section */}
+<div className="text-center mb-12">
+<h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+Build Your Perfect Setup
+</h3>
+<p className="text-lg text-gray-600 max-w-2xl mx-auto">
+Tell us about your needs and get a custom compressor recommendation with precise cost calculations
+</p>
+</div>
+
+<div className="mb-16">
+<CompressorConfigurator />
+</div>
+
+{/* Trust Indicators */}
+<div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+<div className="grid md:grid-cols-4 gap-8 text-center">
+<div className="space-y-3">
+<div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto">
+<svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+</div>
+<div className="text-2xl font-bold text-green-600">98%</div>
+<div className="text-sm text-gray-600 font-medium">Accuracy Rate</div>
+</div>
+
+<div className="space-y-3">
+<div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto">
+<svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+</div>
+<div className="text-2xl font-bold text-blue-600">5 mins</div>
+<div className="text-sm text-gray-600 font-medium">Quick Quote</div>
+</div>
+
+<div className="space-y-3">
+<div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto">
+<svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>
+</div>
+<div className="text-2xl font-bold text-purple-600">₹2L+</div>
+<div className="text-sm text-gray-600 font-medium">Avg. Savings</div>
+</div>
+
+<div className="space-y-3">
+<div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto">
+<svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+</svg>
+</div>
+<div className="text-2xl font-bold text-orange-600">5000+</div>
+<div className="text-sm text-gray-600 font-medium">Happy Customers</div>
+</div>
+</div>
+
+{/* Call-to-Action */}
+<div className="text-center mt-12">
+<div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 cursor-pointer group">
+<span>Ready to Get Started?</span>
+<svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</div>
+<p className="text-gray-600 text-sm mt-3">
+Free consultation • No obligation • Expert advice
+</p>
+</div>
+</div>
+</div>
+</section>
+)
+}
+
 function ProductFamilies(){
 return (
 <section className="py-16">
@@ -1007,6 +1110,7 @@ return (
 <CustomerStories />
 <VisualExplanations />
 <AboutSection />
+<InteractiveDemosSection />
 <ProductFamilies />
 
 <section className="py-20 bg-white">

@@ -1,17 +1,13 @@
+import CompAirLogo from './CompAirLogo';
+
 export default function Footer(){
 return (
 <footer className="bg-gray-900 text-white">
 <div className="container mx-auto px-4 py-12">
 <div className="grid md:grid-cols-4 gap-8">
 <div className="md:col-span-2">
-<div className="flex items-center gap-3 mb-4">
-<div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-C
-</div>
-<div className="flex flex-col">
-<span className="font-bold text-xl">CompAir India</span>
-<span className="text-sm text-gray-400">Compressed Air Solutions</span>
-</div>
+<div className="mb-4">
+<CompAirLogo className="h-10" isDark={true} />
 </div>
 <p className="text-gray-300 leading-relaxed mb-4 max-w-md">
 CompAir is committed to providing superior compressed air solutions across India. 
