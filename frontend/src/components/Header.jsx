@@ -53,7 +53,29 @@ export const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}\n          <nav className=\"hidden md:flex items-center space-x-8\">\n            {navItems.map((item) => (\n              <Link\n                key={item.path}\n                to={item.path}\n                className={`font-medium transition-colors hover:text-blue-600 ${\n                  isActive(item.path)\n                    ? 'text-blue-600 font-semibold'\n                    : isScrolled || location.pathname !== '/'\n                    ? 'text-gray-700'\n                    : 'text-white'\n                }`}\n              >\n                {item.label}\n              </Link>\n            ))}\n            <Link to=\"/contact\">\n              <Button className=\"bg-blue-600 hover:bg-blue-700 text-white\">\n                Get Quote\n              </Button>\n            </Link>\n          </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-medium transition-colors hover:text-blue-600 ${
+                  isActive(item.path)
+                    ? 'text-blue-600 font-semibold'
+                    : isScrolled || location.pathname !== '/'
+                    ? 'text-gray-700'
+                    : 'text-white'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/contact">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Get Quote
+              </Button>
+            </Link>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
