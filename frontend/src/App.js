@@ -1,32 +1,35 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
 import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Products } from "./components/Products";
-import { Features } from "./components/Features";
-import { Downloads } from "./components/Downloads";
-import { CTA } from "./components/CTA";
-import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import AboutPage from "./pages/AboutPage";
+import IndustriesPage from "./pages/IndustriesPage";
+import AftermarketPage from "./pages/AftermarketPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Products />
-        <Features />
-        <Downloads />
-        <CTA />
-        <Contact />
-      </main>
-      <Footer />
-      <Toaster position="top-right" richColors />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/aftermarket" element={<AftermarketPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+        <Toaster position="top-right" richColors />
+      </div>
+    </BrowserRouter>
   );
 }
 
