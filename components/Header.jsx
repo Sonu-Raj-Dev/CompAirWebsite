@@ -9,6 +9,9 @@ return (
 <CompAirLogo className="h-12" />
 </Link>
 <nav className="hidden md:flex gap-8 text-sm font-medium">
+<Link href="/" className="text-gray-700 hover:text-blue-900 transition-colors">
+Home
+</Link>
 <Link href="/products" className="text-gray-700 hover:text-blue-900 transition-colors">
 Products
 </Link>

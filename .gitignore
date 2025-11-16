@@ -85,3 +85,10 @@ logs
 # Cache directories
 .cache/
 .parcel-cache/
+.tmp/
+tmp/
+temp/
+.sass-cache/
+.webpack/
+.turbo/
+.next/
